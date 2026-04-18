@@ -1,0 +1,190 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 6,
+    "margin-top": 6,
+    "margin-left": 12,
+    "margin-right": 12,
+    "modules-left": [
+      "clock",
+      "tray",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "hyprland/window"
+    ],
+    "modules-right": [
+      "custom/notifications",
+      "network",
+      "pulseaudio",
+      "cpu",
+      "memory",
+      "custom/power"
+    ],
+    "hyprland/workspaces": {
+      "disable-scroll": false,
+      "all-outputs": false,
+      "active-only": false,
+      "sort-by-number": true,
+      "format": "{name}",
+      "ignore-workspaces": [
+        "^[1-5]$"
+      ],
+      "sort-by": "number"
+    },
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 90,
+      "separate-outputs": true
+    },
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format": "  {:%H:%M}",
+      "format-alt": "{:%A, %d %B %Y}"
+    },
+    "tray": {
+      "spacing": 8
+    },
+    "custom/notifications": {
+      "format": "{}",
+      "return-type": "json",
+      "exec": "sh -c 'COUNT=$(swaync-client -c 2>/dev/null || echo 0); if [ \"$COUNT\" -gt 0 ]; then printf \"{\\\"text\\\":\\\" %s\\\",\\\"class\\\":\\\"notification\\\"}\" \"$COUNT\"; else printf \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"none\\\"}\"; fi'",
+      "interval": 2,
+      "on-click": "swaync-client -t",
+      "tooltip": false
+    },
+    "network": {
+      "format-wifi": "󰤨",
+      "format-ethernet": "󰈀",
+      "format-disconnected": "󰤭",
+      "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\n{ipaddr}/{cidr}",
+      "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "kitty -e nmtui"
+    },
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-muted": "󰝟  muted",
+      "format-icons": {
+        "default": [
+          "󰕿",
+          "󰖀",
+          "󰕾"
+        ]
+      },
+      "on-click": "pavucontrol"
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "tooltip": true,
+      "interval": 2
+    },
+    "memory": {
+      "format": "  {}%",
+      "tooltip": true,
+      "interval": 2
+    },
+    "custom/power": {
+      "format": "",
+      "tooltip": false,
+      "on-click": "hyprshutdown 2>/dev/null || hyprctl dispatch exit"
+    },
+    "output": [
+      "HDMI-A-4"
+    ]
+  },
+  {
+    "layer": "top",
+    "position": "top",
+    "height": 36,
+    "spacing": 6,
+    "margin-top": 6,
+    "margin-left": 12,
+    "margin-right": 12,
+    "modules-left": [
+      "clock",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "hyprland/window"
+    ],
+    "modules-right": [
+      "custom/notifications",
+      "network",
+      "pulseaudio",
+      "cpu",
+      "memory",
+      "custom/power"
+    ],
+    "hyprland/workspaces": {
+      "disable-scroll": false,
+      "all-outputs": false,
+      "active-only": false,
+      "sort-by-number": true,
+      "format": "{name}",
+      "ignore-workspaces": [
+        "^([6-9]|10)$"
+      ],
+      "sort-by": "number"
+    },
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 90,
+      "separate-outputs": true
+    },
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format": "  {:%H:%M}",
+      "format-alt": "{:%A, %d %B %Y}"
+    },
+    "custom/notifications": {
+      "format": "{}",
+      "return-type": "json",
+      "exec": "sh -c 'COUNT=$(swaync-client -c 2>/dev/null || echo 0); if [ \"$COUNT\" -gt 0 ]; then printf \"{\\\"text\\\":\\\" %s\\\",\\\"class\\\":\\\"notification\\\"}\" \"$COUNT\"; else printf \"{\\\"text\\\":\\\"\\\",\\\"class\\\":\\\"none\\\"}\"; fi'",
+      "interval": 2,
+      "on-click": "swaync-client -t",
+      "tooltip": false
+    },
+    "network": {
+      "format-wifi": "󰤨",
+      "format-ethernet": "󰈀",
+      "format-disconnected": "󰤭",
+      "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\n{ipaddr}/{cidr}",
+      "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr}",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "kitty -e nmtui"
+    },
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-muted": "󰝟  muted",
+      "format-icons": {
+        "default": [
+          "󰕿",
+          "󰖀",
+          "󰕾"
+        ]
+      },
+      "on-click": "pavucontrol"
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "tooltip": true,
+      "interval": 2
+    },
+    "memory": {
+      "format": "  {}%",
+      "tooltip": true,
+      "interval": 2
+    },
+    "custom/power": {
+      "format": "",
+      "tooltip": false,
+      "on-click": "hyprshutdown 2>/dev/null || hyprctl dispatch exit"
+    },
+    "output": [
+      "DVI-D-1"
+    ]
+  }
+]

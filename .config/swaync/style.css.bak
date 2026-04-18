@@ -1,0 +1,145 @@
+/* swaync style.css — imports matugen-generated colours */
+@import url("colors.css");
+
+/* ── Notification window ──────────────────────────────────────────────── */
+.notification-row {
+  outline: none;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  opacity: 1;
+}
+
+.notification {
+  border-radius: 12px;
+  margin: 6px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  padding: 0;
+}
+
+.notification-content {
+  background: var(--md-surface-variant);
+  color: var(--md-on-surface-variant);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--md-outline-variant);
+}
+
+.notification.critical .notification-content {
+  background: var(--md-error);
+  color: var(--md-on-error);
+  border-color: var(--md-error);
+}
+
+.notification-default-action {
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+}
+
+.notification-default-action:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.notification-icon {
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.notification-action {
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--md-outline-variant);
+  color: var(--md-on-surface-variant);
+  margin: 4px 2px;
+  padding: 4px 10px;
+}
+
+.notification-action:hover {
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+  border-color: var(--md-primary);
+}
+
+/* ── Control centre ───────────────────────────────────────────────────── */
+.control-center {
+  background: color-mix(in srgb, var(--md-surface) 92%, transparent);
+  border: 1px solid var(--md-outline-variant);
+  border-radius: 16px;
+  margin: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.widget-title {
+  color: var(--md-on-surface);
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  padding: 8px 12px 4px;
+}
+
+.widget-title > button {
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+  border-radius: 8px;
+  border: none;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.widget-title > button:hover {
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+}
+
+/* ── DND toggle — fixed sizing ────────────────────────────────────────── */
+.widget-dnd {
+  color: var(--md-on-surface);
+  font-size: 13px;
+  padding: 8px 12px;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  min-height: 32px;
+}
+
+.widget-dnd > switch {
+  border-radius: 20px;
+  border: 1px solid var(--md-outline);
+  background: var(--md-surface-variant);
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.widget-dnd > switch:checked {
+  background: var(--md-primary);
+  border-color: var(--md-primary);
+}
+
+.widget-dnd > switch slider {
+  background: var(--md-on-primary);
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 2px;
+}
+
+/* ── Close button ─────────────────────────────────────────────────────── */
+.close-button {
+  background: transparent;
+  color: var(--md-on-surface-variant);
+  border: none;
+  border-radius: 50%;
+  padding: 4px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  background: var(--md-error);
+  color: var(--md-on-error);
+}

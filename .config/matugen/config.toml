@@ -1,0 +1,34 @@
+[config]
+reload_gtk_theme = true
+set_wallpaper = false
+
+[templates.hyprland]
+input_path  = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+
+[templates.waybar]
+input_path  = "~/.config/matugen/templates/waybar-colors.css"
+output_path = "~/.config/waybar/colors.css"
+post_hook   = "pkill -SIGUSR2 waybar || true"
+
+[templates.rofi]
+input_path  = "~/.config/matugen/templates/rofi-colors.rasi"
+output_path = "~/.config/rofi/themes/colors.rasi"
+
+[templates.swaync]
+input_path  = "~/.config/matugen/templates/swaync-colors.css"
+output_path = "~/.config/swaync/colors.css"
+post_hook   = "swaync-client --reload-css"
+
+[templates.kitty]
+input_path  = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/themes/matugen.conf"
+
+[templates.spotify]
+input_path  = "~/.config/matugen/templates/spotify-colors.ini"
+output_path = "~/.config/spicetify/Themes/Comfy/Comfy/color.ini"
+post_hook   = "spicetify apply"
+
+[templates.discord]
+input_path  = "~/.config/matugen/templates/midnight-discord.theme.css"
+output_path = "~/.config/Vencord/settings/quickCss.css"

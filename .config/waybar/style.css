@@ -1,0 +1,167 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Adwaita Sans", sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @on_surface;
+    border: none;
+    box-shadow: none;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+tooltip {
+    background: alpha(#000000, 0.88);
+    border: 1px solid alpha(@outline_variant, 0.65);
+    border-radius: 12px;
+    color: @on_surface;
+}
+
+tooltip label {
+    color: @on_surface;
+}
+
+/* ── Shared pill base ─────────────────────────────────────────────────────── */
+#clock,
+#tray,
+#workspaces,
+#window,
+#custom-notifications,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#custom-power {
+    background: alpha(#000000, 0.58);
+    border-radius: 999px;
+    margin: 4px 2px;
+    min-height: 28px;
+}
+
+/* ── Clock (glyph + time both themed) ────────────────────────────────────── */
+#clock {
+    padding: 0 12px;
+    font-weight: 700;
+    color: @primary;
+}
+
+/* ── Tray (icon colour themed) ───────────────────────────────────────────── */
+#tray {
+    padding: 0 10px;
+    color: @primary;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: transparent;
+}
+
+/* ── Window title ─────────────────────────────────────────────────────────── */
+#window {
+    padding: 0 18px;
+    font-style: normal;
+    font-weight: 600;
+    color: @primary;
+}
+
+/* ── Right side modules ───────────────────────────────────────────────────── */
+#network {
+    padding: 0 12px;
+    color: @primary;
+}
+
+#pulseaudio {
+    padding: 0 12px;
+    color: @primary;
+}
+
+#cpu {
+    padding: 0 12px;
+    color: @primary;
+}
+
+#memory {
+    padding: 0 12px;
+    color: @primary;
+}
+
+/* ── Workspaces ───────────────────────────────────────────────────────────── */
+#workspaces {
+    padding: 0 8px;
+}
+
+#workspaces button {
+    min-width: 36px;
+    min-height: 28px;
+    padding: 0;
+    margin: 0 2px;
+    border-radius: 999px;
+    background: transparent;
+    color: @primary;
+    transition: all 0.2s ease;
+    font-weight: 700;
+}
+
+#workspaces button label {
+    color: inherit;
+}
+
+#workspaces button:hover {
+    background: alpha(@primary, 0.18);
+    color: @primary;
+}
+
+#workspaces button.active {
+    background: @primary;
+    color: @on_primary;
+    font-weight: 800;
+    min-width: 40px;
+}
+
+#workspaces button.active label {
+    color: @on_primary;
+}
+
+#workspaces button.urgent {
+    background: alpha(@error, 0.92);
+    color: @on_error;
+}
+
+#workspaces button.urgent label {
+    color: @on_error;
+}
+
+/* ── Notifications ────────────────────────────────────────────────────────── */
+#custom-notifications {
+    padding: 0 12px;
+    color: @primary;
+}
+
+#custom-notifications.notification {
+    color: @primary;
+}
+
+/* ── Power button ─────────────────────────────────────────────────────────── */
+#custom-power {
+    color: @primary;
+    font-size: 15px;
+    padding: 0 13px;
+}
+
+#custom-power:hover {
+    background: alpha(@error, 0.95);
+    color: @on_error;
+}

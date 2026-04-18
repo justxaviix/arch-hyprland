@@ -1,0 +1,166 @@
+/**
+ * @name midnight
+ * @description A dark, rounded discord theme.
+ * @author refact0r
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/midnight.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+ */
+
+@import url('https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/midnight.theme.css');
+
+/* matugen overrides - must come after import */
+:root,
+.theme-dark,
+.theme-light {
+  --font: 'figtree';
+  --corner-text: 'Midnight';
+  --online-indicator: #8ad0ef !important;
+  --dnd-indicator: #ffb4ab !important;
+  --idle-indicator: #454364 !important;
+  --streaming-indicator: #003545 !important;
+  --accent-1: #c5c2ea !important;
+  --accent-2: #8ad0ef !important;
+  --accent-3: #8ad0ef !important;
+  --accent-4: #262b2d !important;
+  --accent-5: #8ad0ef !important;
+  --mention: #0f1417 !important;
+  --mention-hover: #262b2d !important;
+  --text-0: #0f1417 !important;
+  --text-1: #dfe3e6 !important;
+  --text-2: #dfe3e6 !important;
+  --text-3: #c0c8cd !important;
+  --text-4: #c0c8cd !important;
+  --text-5: #8a9297 !important;
+  --bg-1: #8ad0ef !important;
+  --bg-2: #262b2d !important;
+  --bg-3: #1b2023 !important;
+  --bg-4: #0f1417 !important;
+  --hover: #262b2d !important;
+  --active: #262b2d !important;
+  --message-hover: #262b2d !important;
+}
+
+/* Add Friend button only - using both unique classes as selector */
+.item__133bf.addFriend__133bf {
+  background-color: #8ad0ef !important;
+  color: #003545 !important;
+}
+
+.item__133bf.addFriend__133bf:hover {
+  background-color: #004d63 !important;
+}
+
+/* Home/moon button - targeted by data attribute */
+[data-list-item-id="private-channels-uid_25___friends"] .interactive__972a0 {
+  background-color: #8ad0ef !important;
+  border-radius: 50% !important;
+}
+
+[data-list-item-id="private-channels-uid_25___friends"] .linkButtonIcon__972a0 {
+  color: #003545 !important;
+}
+
+/* Mention highlight */
+.mentioned__5126c {
+  background-color: #8ad0ef20 !important;
+  border-left-color: #8ad0ef !important;
+}
+
+.mentioned__5126c:hover {
+  background-color: #8ad0ef30 !important;
+}
+
+/* Unread mentions bar - target inner bar not outer container */
+.unreadMentionsBar_ef3116 {
+  background-color: #8ad0ef !important;
+  color: #003545 !important;
+}
+
+.unreadMentionsBar_ef3116 * {
+  color: #003545 !important;
+}
+
+/* Reply thread line and mention left border */
+.repliedMessageClickableSpine_c19a55 {
+  border-left-color: #8ad0ef !important;
+}
+
+.mentioned__5126c::before {
+  background-color: #8ad0ef !important;
+}
+
+/* @mention text highlight */
+.mention.interactive {
+  background-color: #8ad0ef40 !important;
+  color: #8ad0ef !important;
+}
+
+.mention.interactive:hover {
+  background-color: #8ad0ef60 !important;
+  color: #bce9ff !important;
+}
+
+/* Unread channel indicator */
+.unread__2ea32 {
+  background-color: #8ad0ef !important;
+}
+
+/* Mentions number badge */
+.numberBadge__2b1f5 {
+  background-color: #8ad0ef !important;
+  color: #003545 !important;
+}
+
+/* Font colour overrides */
+[class*="markup_"],
+[class*="messageContent_"] {
+  color: #dfe3e6 !important;
+}
+
+[class*="defaultColor_"] {
+  color: #c0c8cd !important;
+}
+
+/* New Unreads / Jump to present pill */
+.bar__7aaec {
+  background-color: #8ad0ef !important;
+  color: #003545 !important;
+}
+
+.bar__7aaec * {
+  color: #003545 !important;
+  fill: #003545 !important;
+}
+
+/* "X new messages since" bar */
+.newMessagesBar__0f481.barBase__0f481 {
+  background-color: #8ad0ef !important;
+  color: #003545 !important;
+}
+
+.newMessagesBar__0f481 * {
+  color: #003545 !important;
+}
+
+/* Jump To Present bar and button */
+.jumpToPresentBar__0f481 {
+  background-color: #1b2023 !important;
+}
+
+.jumpToPresentBar__0f481 .button_a22cb0.primary_a22cb0 {
+  background-color: #8ad0ef !important;
+  color: #003545 !important;
+}
+
+.jumpToPresentBar__0f481 .button_a22cb0.primary_a22cb0:hover {
+  background-color: #004d63 !important;
+}
+
+/* Role tag text color */
+.tagText__10651 {
+  color: #003545 !important;
+}

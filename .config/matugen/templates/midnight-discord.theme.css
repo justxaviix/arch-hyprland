@@ -1,0 +1,230 @@
+/**
+ * @name midnight-matugen
+ * @description Matugen color overrides for Discord with moon icon.
+ * @author xavier
+ */
+
+/* moon icon font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* moon icon variables */
+body {
+  --dms-icon-svg-transition: 0.4s ease;
+  --custom-dms-icon: custom;
+  --dms-icon-svg-url: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg');
+  --dms-icon-svg-size: 90%;
+  --dms-icon-color-before: var(--interactive-normal);
+  --dms-icon-color-after: var(--white-500);
+}
+
+/* moon icon implementation */
+[data-list-item-id="private-channels-uid_25___friends"] .linkButtonIcon__972a0 {
+  display: none;
+}
+[data-list-item-id="private-channels-uid_25___friends"] .channel__972a0::before {
+  content: '';
+  position: absolute;
+  width: var(--dms-icon-svg-size);
+  height: var(--dms-icon-svg-size);
+  background-color: var(--dms-icon-color-before);
+  -webkit-mask: var(--dms-icon-svg-url) center/contain no-repeat;
+  mask: var(--dms-icon-svg-url) center/contain no-repeat;
+  transition: background-color var(--dms-icon-svg-transition);
+  pointer-events: none;
+}
+[data-list-item-id="private-channels-uid_25___friends"] .channel__972a0:hover::before,
+[data-list-item-id="private-channels-uid_25___friends"] .channel__972a0.selected__972a0::before {
+  background-color: var(--dms-icon-color-after);
+}
+
+/* matugen color overrides */
+:root,
+.theme-dark,
+.theme-light {
+  --online-indicator: {{colors.primary.default.hex}} !important;
+  --dnd-indicator: {{colors.error.default.hex}} !important;
+  --idle-indicator: {{colors.tertiary_container.default.hex}} !important;
+  --streaming-indicator: {{colors.on_primary.default.hex}} !important;
+  --accent-1: {{colors.tertiary.default.hex}} !important;
+  --accent-2: {{colors.primary.default.hex}} !important;
+  --accent-3: {{colors.primary.default.hex}} !important;
+  --accent-4: {{colors.surface_container_high.default.hex}} !important;
+  --accent-5: {{colors.primary.default.hex}} !important;
+  --mention: {{colors.surface.default.hex}} !important;
+  --mention-hover: {{colors.surface_container_high.default.hex}} !important;
+  --text-0: {{colors.surface.default.hex}} !important;
+  --text-1: {{colors.on_surface.default.hex}} !important;
+  --text-2: {{colors.on_surface.default.hex}} !important;
+  --text-3: {{colors.on_surface_variant.default.hex}} !important;
+  --text-4: {{colors.on_surface_variant.default.hex}} !important;
+  --text-5: {{colors.outline.default.hex}} !important;
+  --bg-1: {{colors.primary.default.hex}} !important;
+  --bg-2: {{colors.surface_container_high.default.hex}} !important;
+  --bg-3: {{colors.surface_container.default.hex}} !important;
+  --bg-4: {{colors.surface.default.hex}} !important;
+  --hover: {{colors.surface_container_high.default.hex}} !important;
+  --active: {{colors.surface_container_high.default.hex}} !important;
+  --message-hover: {{colors.surface_container_high.default.hex}} !important;
+}
+
+/* Add Friend button */
+.item__133bf.addFriend__133bf {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+.item__133bf.addFriend__133bf:hover {
+  background-color: {{colors.primary_container.default.hex}} !important;
+}
+
+/* Mention highlight */
+.mentioned__5126c {
+  background-color: {{colors.primary.default.hex}}20 !important;
+  border-left-color: {{colors.primary.default.hex}} !important;
+}
+.mentioned__5126c:hover {
+  background-color: {{colors.primary.default.hex}}30 !important;
+}
+
+/* Unread mentions bar */
+.unreadMentionsBar_ef3116 {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+.unreadMentionsBar_ef3116 * {
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+/* Reply thread line and mention left border */
+.repliedMessageClickableSpine_c19a55 {
+  border-left-color: {{colors.primary.default.hex}} !important;
+}
+.mentioned__5126c::before {
+  background-color: {{colors.primary.default.hex}} !important;
+}
+
+/* @mention text highlight */
+.mention.interactive {
+  background-color: {{colors.primary.default.hex}}40 !important;
+  color: {{colors.primary.default.hex}} !important;
+}
+.mention.interactive:hover {
+  background-color: {{colors.primary.default.hex}}60 !important;
+  color: {{colors.on_primary_container.default.hex}} !important;
+}
+
+/* Unread channel indicator */
+.unread__2ea32 {
+  background-color: {{colors.primary.default.hex}} !important;
+}
+
+/* Mentions number badge */
+.numberBadge__2b1f5 {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+/* Font colour overrides */
+[class*="markup_"],
+[class*="messageContent_"] {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+[class*="defaultColor_"] {
+  color: {{colors.on_surface_variant.default.hex}} !important;
+}
+
+/* New Unreads / Jump to present pill */
+.bar__7aaec {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+.bar__7aaec * {
+  color: {{colors.on_primary.default.hex}} !important;
+  fill: {{colors.on_primary.default.hex}} !important;
+}
+
+/* "X new messages since" bar */
+.newMessagesBar__0f481.barBase__0f481 {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+.newMessagesBar__0f481 * {
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+/* Jump To Present bar and button */
+.jumpToPresentBar__0f481 {
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+.jumpToPresentBar__0f481 .button_a22cb0.primary_a22cb0 {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+.jumpToPresentBar__0f481 .button_a22cb0.primary_a22cb0:hover {
+  background-color: {{colors.primary_container.default.hex}} !important;
+}
+
+
+/* Moon icon */
+.childWrapper__6e9f8 > * {
+  display: none !important;
+}
+.childWrapper__6e9f8 {
+  border-radius: 50% !important;
+  transition: background-color 0.4s ease !important;
+}
+.childWrapper__6e9f8:hover,
+.wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
+  background-color: {{colors.primary.default.hex}} !important;
+}
+.childWrapper__6e9f8::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  -webkit-mask: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg') center/contain no-repeat;
+  mask: url('https://refact0r.github.io/midnight-discord/assets/Font_Awesome_5_solid_moon.svg') center/contain no-repeat;
+  transition: background-color 0.4s ease;
+  pointer-events: none;
+}
+.childWrapper__6e9f8:hover::after,
+.wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8::after {
+  animation: moonSpin 0.4s ease forwards;
+}
+@keyframes moonSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Bot APP tag */
+.botTagRegular__82f07 {
+  background: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+.botTagRegular__82f07 .botTagVerified__82f07 {
+  filter: brightness(0) !important;
+}
+
+/* New messages divider */
+.divider__908e2 {
+  border-color: {{colors.primary.default.hex}} !important;
+}
+.divider__908e2 .content__908e2 {
+  background: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+.unreadPill__908e2,
+.endCap__908e2 {
+  background: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+  border-color: {{colors.primary.default.hex}} !important;
+}
+.endCap__908e2::before,
+.endCap__908e2::after {
+  background: {{colors.primary.default.hex}} !important;
+  border-color: {{colors.primary.default.hex}} !important;
+}
+.unreadPillCapStroke__908e2 {
+  stroke: {{colors.primary.default.hex}} !important;
+  fill: {{colors.primary.default.hex}} !important;
+}

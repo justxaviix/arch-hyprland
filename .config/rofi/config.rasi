@@ -1,0 +1,19 @@
+configuration {
+    modi:                       "drun,run";
+    show-icons:                 true;
+    icon-theme:                 "Papirus-Dark";
+    display-drun:               " Apps";
+    display-run:                " Run";
+    drun-display-format:        "{name}";
+    font:                       "JetBrainsMono Nerd Font 12";
+    matching:                   "fuzzy";
+    sort:                       true;
+    sorted-dmenu:               true;
+    scrollbar:                  false;
+    cycle:                      true;
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+}
+
+@theme "~/.config/rofi/themes/launcher.rasi"
