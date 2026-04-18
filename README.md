@@ -104,8 +104,8 @@ Then reload Hyprland: `Super + Shift + E` or log out and back in.
 
 | Keybind | Action |
 |---|---|
-| `Super + Return` | Open terminal (Kitty) |
-| `Super + D` | Open launcher (Rofi) |
+| `Super + Q` | Open terminal (Kitty) |
+| `Super + R` | Open launcher (Rofi) |
 | `Super + M` | Power menu |
 | `Super + Tab` | Window switcher |
 | `Super + Shift + W` | Wallpaper picker (triggers matugen re-theme) |
