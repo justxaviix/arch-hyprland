@@ -1,0 +1,13 @@
+Wallpapers/
+.config/discord/Cache/
+.config/discord/Cookies
+.config/discord/Local\ Storage/
+.config/discord/Network\ Persistent\ State
+.config/discord/logs/
+.config/discord/sentry/
+.config/hypr/colors.conf
+.config/hypr/current_wallpaper
+.config/kitty/themes/matugen.conf
+.config/rofi/themes/colors.rasi
+.config/swaync/colors.css
+.config/waybar/colors.css
